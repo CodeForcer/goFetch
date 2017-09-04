@@ -1,7 +1,7 @@
 # goFetch
 Pluggable modules for collecting raw crypto orderbook data
 
-The aim of this module is to develop self-contained functions which can be imported into another script. Each function will continuously gather orderbook data from a specific exchange. The functions are designed to be executed through multiprocessing for parralel concurrency.
+The aim of this module is to develop self-contained functions which can be imported into another script. Each function will continuously gather orderbook data from a specific exchange. The functions are designed to be executed through multiprocessing for parralel concurrency, although there is no exception in this project to the addition of single threading or asyncio.
 
 Each function should take 2 arguments, a list of pairs and a queue. Each function will subscribe to the relevant crypto exchange and begin returning complete orderbook snapshots of the chosen pairs in the format:
 
@@ -12,8 +12,11 @@ Although the overriding format is dictionary based the choice of list objects fo
 Example function:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def BitfinexBooks(pairs, queue):
+  # Function subscribes to appropriate websocket with appropriate pairs
   while True:
-      # function
+      # Function gathers and updates current orderbook
+      output = # Current orderbook
+      queue.put(output)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
  

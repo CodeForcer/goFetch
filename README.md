@@ -39,3 +39,5 @@ while True:
 Such a script should continuously print a current snapshot of the Bitfinex orderooks for BTCUSD, ETHUSD & ETHBTC.
 
 It is intended that these functions should be as simple as possible, with no features other than the ability to gather and return orderbooks into a queue at the fastest possible speed. The aim is to develop such functions for as many different cryptocurrency exchanges as possible.
+
+Note: Subfolders for this project should be the names of an exchange and contain only API classes or code provided by the exchange, the idea being that the entire project can be downloaded and run without any further installation of modules. If possible the scripts within subfolders should be trimmed of extraneous and uneeded code.

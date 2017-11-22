@@ -1,5 +1,5 @@
 # goFetch
-Pluggable modules for collecting raw crypto orderbook data
+Pluggable websocket modules for collecting raw crypto orderbook data
 
 The aim of this module is to develop self-contained functions which can be imported into another script. Each function will continuously gather orderbook data from a specific exchange. The functions are designed to be executed through multiprocessing for parralel concurrency, although there is no exception in this project to the addition of single threading or asyncio.
 
